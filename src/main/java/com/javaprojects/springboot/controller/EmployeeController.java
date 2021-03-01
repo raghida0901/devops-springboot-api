@@ -32,19 +32,21 @@ public class EmployeeController {
 	
 	
 	// get all employees
-	
+	@CrossOrigin(origins = "*")
 	@GetMapping("/employees")
 	public List<Employee> getAllEmployees(){
 		return employeeRepository.findAll();
 	}
 	
 	//create employee rest api
+	@CrossOrigin(origins = "*")
 	@PostMapping("/employees")
 	public Employee createEmployee(@RequestBody Employee employee) {
 		return employeeRepository.save(employee);
 	}
 	
 	// update employee rest api 
+	@CrossOrigin(origins = "*")
 	@PutMapping("/employee/{id}")
 	public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee employeeDetails){
 		Employee employee = employeeRepository.findById(id)
@@ -58,6 +60,7 @@ public class EmployeeController {
 		}
 	
 	// delete employee rest api 
+	@CrossOrigin(origins = "*")
 	@DeleteMapping("/employees/{id}")
 	public ResponseEntity<Map<String, Boolean>> deleteEmployee(@PathVariable Long id){
 		Employee employee = employeeRepository.findById(id)
