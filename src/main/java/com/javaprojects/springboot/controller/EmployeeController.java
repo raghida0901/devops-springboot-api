@@ -21,7 +21,7 @@ import com.javaprojects.springboot.exception.ResourceNotFoundException;
 import com.javaprojects.springboot.model.Employee;
 import com.javaprojects.springboot.repository.EmployeeRepository;
 
-@CrossOrigin(origins = "http://127.0.0.1:4200") 
+@CrossOrigin(origins = "http://40.121.167.90")
 @RestController
 @RequestMapping("/api/v1/")
 
