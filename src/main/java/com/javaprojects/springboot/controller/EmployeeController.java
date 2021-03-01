@@ -21,7 +21,7 @@ import com.javaprojects.springboot.exception.ResourceNotFoundException;
 import com.javaprojects.springboot.model.Employee;
 import com.javaprojects.springboot.repository.EmployeeRepository;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*") //cors issue
 @RestController
 @RequestMapping("/api/v1/")
 
