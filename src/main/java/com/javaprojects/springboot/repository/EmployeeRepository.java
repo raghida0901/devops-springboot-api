@@ -8,5 +8,5 @@ import com.javaprojects.springboot.model.Employee;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long>{
-
+	public Employee findByemailID(String email);
 }
